@@ -3,7 +3,9 @@
     <div class="px-5 py-4">
         <div class="flex items-center justify-between">
             <div class="flex items-center">
-                <h2 class="mx-1 lg:mx-2 text-lg font-semibold">SICONTRUCT</h2>
+                <img src="/img/MyLogoLight.png" alt="Logo" class="w-12 block dark:hidden">
+                <img src="/img/MyLogoDark.png" alt="Logo" class="w-12 hidden dark:block">
+                <h2 class="mx-1 lg:mx-2 text-lg font-bold">SICONTRUCT</h2>
             </div>
             <div class="lg:hidden hover:text-blue-500">
                 <button id="closeSidebar">

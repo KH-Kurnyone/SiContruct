@@ -203,8 +203,10 @@
         window.addEventListener("scroll", () => {
             if (window.scrollY > 5) {
                 header.classList.add("shadow-md");
+                header.classList.add("dark:shadow-gray-300");
             } else {
                 header.classList.remove("shadow-md");
+                header.classList.remove("dark:shadow-gray-300");
             }
         });
 
