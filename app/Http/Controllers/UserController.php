@@ -33,26 +33,15 @@ class UserController extends Controller
      */
     public function store(Request $request)
     {
-        $request->validate([
-            'name' => 'required|string',
-            'email' => 'required|string|unique:users',
-            'password' => 'required|string',
-            'password_confirmation' => 'required|same:password'
+
+        $user = new User([
+            'name'  => $request->name,
+            'email' => $request->email,
+            'password' =>  Hash::make($request->password),
         ]);
 
-        try {
-            $user = new User([
-                'name'  => $request->name,
-                'email' => $request->email,
-                'password' =>  Hash::make($request->password),
-            ]);
-
-            $user->save();
-            return redirect()->route('users.index')
-                ->with('success', 'User ' . $user->name . ' has been added successfully!');
-        } catch (\Throwable $th) {
-            return back()->with('error', $th->getMessage());
-        }
+        $user->save();
+        return redirect()->route('users.index');
     }
 
     /**

@@ -18,37 +18,38 @@
                 </div>
                 <!-- Navigation Links -->
                 <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
-                    <x-nav-link :active="request()->routeIs('')">
-                        {{ __('Pekerja') }}
-                    </x-nav-link>
-                </div>
-                <!-- Navigation Links -->
-                <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
-                    <x-nav-link :active="request()->routeIs('')">
-                        {{ __('Perusahaan') }}
-                    </x-nav-link>
-                </div>
-                <!-- Navigation Links -->
-                <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
-                    <x-nav-link :active="request()->routeIs('')">
+                    <x-nav-link :href="route('project.index')" :active="request()->routeIs('project.index')">
                         {{ __('Proyek') }}
                     </x-nav-link>
                 </div>
                 <!-- Navigation Links -->
                 <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
-                    <x-nav-link :active="request()->routeIs('')">
+                    <x-nav-link :href="route('company.index')" :active="request()->routeIs('company.index')">
+                        {{ __('Perusahaan') }}
+                    </x-nav-link>
+                </div>
+                <!-- Navigation Links -->
+                <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
+                    <x-nav-link :href="route('worker.index')" :active="request()->routeIs('worker.index')">
+                        {{ __('Pekerja') }}
+                    </x-nav-link>
+                </div>
+
+                <!-- Navigation Links -->
+                <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
+                    <x-nav-link :href="route('expenditure.index')" :active="request()->routeIs('expenditure.index')">
                         {{ __('Pengeluaran') }}
                     </x-nav-link>
                 </div>
                 <!-- Navigation Links -->
                 <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
-                    <x-nav-link :active="request()->routeIs('')">
+                    <x-nav-link :href="route('payment.index')" :active="request()->routeIs('payment.index')">
                         {{ __('Pembayaran') }}
                     </x-nav-link>
                 </div>
                 <!-- Navigation Links -->
                 <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
-                    <x-nav-link :active="request()->routeIs('')">
+                    <x-nav-link :href="route('report.index')" :active="request()->routeIs('report.index')">
                         {{ __('Laporan') }}
                     </x-nav-link>
                 </div>
